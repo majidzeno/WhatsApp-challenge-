@@ -1,0 +1,11 @@
+img {
+  wight: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+img.user-image {
+  width: 60px;
+  /*float: left;*/
+  vertical-align: sup;
+  margin-right: 1em;
+}
