@@ -9,14 +9,23 @@ display: none !important;
 }
 </style>
 </head>
- <body ng-controller="MainCtrl as ctrl">
-   <div>
-   <ul ng-repeat = "friend in ctrl.friends">
-     <li><img  class = "user-image" ng-src="{{friend.image}}"/>
-     <span>{{friend.name}}</span>
-     <span>{{friend.lastMsg}}</span>
-     <span>{{friend.time|date:'medium'}}</span></li>
-   </ul></div>
+ <body >
+   <div class="container">
+     <div ng-controller="MainCtrl as ctrl">
+        <h1 id="headline"> Whatsapp </h1>
+        <div class="block">
+           <h3>CHATS</h3>
+        <div id="friend-list">
+         <ul ng-repeat = "friend in ctrl.friends">
+           <li><img  class = "user-image" ng-src="{{friend.image}}"/>
+           <span>{{friend.name}}</span>
+           <span>{{friend.lastMsg}}</span>
+           <span>{{friend.time|date:'medium'}}</span></li>
+         </ul>
+         </div>
+      </div>
+     </div>
+   </div>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
    <script src = "F:/Programming/Challenges/Whatsapp/app/js/Controllers/mainCtrl.js"></script>
 </body>
