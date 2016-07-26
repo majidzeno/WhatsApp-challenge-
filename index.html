@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
-  </body>
+ <html ng-app ="WhatsApp">
+ <head><title> WhatsApp</title>
+ <link rel="stylesheet" href="F:/Programming/Challenges/Whatsapp/app/style/app.css">
+
+<style media="screen">
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak {
+display: none !important;
+}
+</style>
+</head>
+ <body ng-controller="MainCtrl as ctrl">
+   <div>
+   <ul ng-repeat = "friend in ctrl.friends">
+     <li><img  class = "user-image" ng-src="{{friend.image}}"/>
+     <span>{{friend.name}}</span>
+     <span>{{friend.lastMsg}}</span>
+     <span>{{friend.time|date:'medium'}}</span></li>
+   </ul></div>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+   <script src = "F:/Programming/Challenges/Whatsapp/app/js/Controllers/mainCtrl.js"></script>
+</body>
 </html>
