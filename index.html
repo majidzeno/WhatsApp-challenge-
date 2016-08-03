@@ -1,7 +1,6 @@
  <html ng-app ="WhatsApp">
  <head><title> WhatsApp</title>
  <link rel="stylesheet" href="F:/Programming/Challenges/Whatsapp/app/style/app.css">
-
 <style media="screen">
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
 .ng-cloak, .x-ng-cloak {
@@ -9,18 +8,19 @@ display: none !important;
 }
 </style>
 </head>
- <body >
+ <body ng-view>
    <div class="container">
      <div ng-controller="MainCtrl as ctrl">
         <h1 id="headline"> Whatsapp </h1>
         <div class="block">
            <h3>CHATS</h3>
         <div id="friend-list">
-         <ul ng-repeat = "friend in ctrl.friends">
+         <ul ng-repeat = "friend in ctrl.friends" ng-click = "Hello stupid">
            <li><img  class = "user-image" ng-src="{{friend.image}}"/>
            <span>{{friend.name}}</span>
            <span>{{friend.lastMsg}}</span>
            <span>{{friend.time|date:'medium'}}</span></li>
+           <hr color = #e7e4e4 />
          </ul>
          </div>
       </div>
